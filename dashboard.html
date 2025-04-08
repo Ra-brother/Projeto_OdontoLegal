@@ -1,0 +1,40 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | OdontoLegal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>OdontoLegal</h2>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+          <li><a href="#">Casos Periciais</a></li>
+          <li><a href="#">Evidências</a></li>
+          <li><a href="#">Laudos</a></li>
+          <li><a href="#">Pacientes</a></li>
+          <li><a href="#">Usuários</a></li>
+          <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1 id="boas-vindas">Bem-vindo(a)</h1>
+      </header>
+
+      <section class="conteudo" id="conteudo-dinamico">
+        <p>Selecione uma opção no menu para começar.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
