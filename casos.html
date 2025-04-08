@@ -1,0 +1,40 @@
+<!-- casos.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casos Periciais - OdontoLegal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Casos Periciais</h1>
+      <div class="header-actions">
+        <input type="text" id="input-busca" placeholder="Buscar por paciente ou título..." />
+        <button id="btn-nova-pericia">+ Nova Perícia</button>
+      </div>
+    </header>
+
+    <main>
+      <table class="tabela-casos">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Paciente</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela-casos">
+          <!-- Casos serão inseridos aqui via JS -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="js/casos.js"></script>
+</body>
+</html>
+

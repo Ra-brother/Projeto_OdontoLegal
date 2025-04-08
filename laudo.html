@@ -1,0 +1,49 @@
+<!-- laudo.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laudo Pericial - OdontoLegal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Laudo Pericial</h1>
+      <button onclick="voltar()">← Voltar</button>
+    </header>
+
+    <section class="info-laudo">
+      <p><strong>Perito:</strong> Dr. João Perito</p>
+      <p><strong>Data:</strong> <span id="data-laudo"></span></p>
+    </section>
+
+    <section class="conteudo-laudo">
+      <h2>Conteúdo do Laudo</h2>
+      <textarea id="texto-laudo" rows="10" placeholder="Digite o conteúdo do laudo aqui..."></textarea>
+      <button onclick="salvarLaudo()">Salvar</button>
+    </section>
+
+    <section class="assinatura">
+      <h2>Assinatura</h2>
+      <p>Este laudo será assinado digitalmente pelo perito responsável.</p>
+      <button onclick="assinarLaudo()">Assinar Laudo</button>
+    </section>
+
+    <section class="historico-revisoes">
+      <h2>Histórico de Revisões</h2>
+      <ul id="lista-revisoes">
+        <!-- Lista dinâmica -->
+      </ul>
+    </section>
+  </div>
+
+  <script src="js/laudo.js"></script>
+  <script>
+    function voltar() {
+      window.location.href = "evidencias.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- detalhes-pericia.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes da Perícia - OdontoLegal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Detalhes da Perícia</h1>
+      <button onclick="voltar()">← Voltar</button>
+    </header>
+
+    <section class="detalhes-pericia">
+      <h2 id="titulo-pericia">Título da Perícia</h2>
+
+      <div class="info-pericia">
+        <p><strong>Paciente:</strong> <span id="paciente-pericia">Nome do Paciente</span></p>
+        <p><strong>Status:</strong> <span id="status-pericia" class="badge-status badge-aberto">Aberto</span></p>
+        <p><strong>Data:</strong> <span id="data-pericia">10/04/2025</span></p>
+        <p><strong>Perito Responsável:</strong> <span id="perito-pericia">Dr. Fulano</span></p>
+      </div>
+
+      <div class="descricao-pericia">
+        <h3>Descrição / Observações</h3>
+        <p id="descricao-pericia">
+          Texto de exemplo da descrição da perícia. Aqui pode conter observações gerais sobre o caso, histórico ou dados relevantes.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function voltar() {
+      window.location.href = "casos.html";
+    }
+  </script>
+</body>
+</html>

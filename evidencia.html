@@ -1,0 +1,41 @@
+<!-- evidencias.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evidências - OdontoLegal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Evidências da Perícia</h1>
+      <button onclick="voltar()">← Voltar</button>
+    </header>
+
+    <section class="nova-evidencia">
+      <h2>Adicionar Nova Evidência</h2>
+      <form id="form-evidencia">
+        <input type="file" id="arquivo-evidencia" accept="image/*" required />
+        <input type="text" id="descricao-evidencia" placeholder="Descrição da evidência" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section class="lista-evidencias">
+      <h2>Lista de Evidências</h2>
+      <div class="evidencias-grid" id="grid-evidencias">
+        <!-- Cards de evidências serão inseridos aqui -->
+      </div>
+    </section>
+  </div>
+
+  <script src="js/evidencias.js"></script>
+  <script>
+    function voltar() {
+      window.location.href = "detalhes-pericia.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+// js/laudo.js
+
+window.addEventListener('DOMContentLoaded', () => {
+  const dataAtual = new Date().toLocaleDateString('pt-BR');
+  document.getElementById('data-laudo').textContent = dataAtual;
+
+  const textoSalvo = localStorage.getItem('laudoTexto');
+  const historico = JSON.parse(localStorage.getItem('laudoHistorico')) || [];
+
+  if (textoSalvo) {
+    document.getElementById('texto-laudo').value = textoSalvo;
+  }
+
+  atualizarListaRevisoes(historico);
+});
+
+function salvarLaudo() {
+  const texto = document.getElementById('texto-laudo').value;
+  const data = new Date().toLocaleString('pt-BR');
+
+  localStorage.setItem('laudoTexto', texto);
+
+  let historico = JSON.parse(localStorage.getItem('laudoHistorico')) || [];
+  historico.unshift(`Revisado em ${data}`);
+  localStorage.setItem('laudoHistorico', JSON.stringify(historico));
+
+  atualizarListaRevisoes(historico);
+  alert('Laudo salvo com sucesso!');
+}
+
+function assinarLaudo() {
+  alert('Laudo assinado digitalmente com sucesso!');
+}
+
+function atualizarListaRevisoes(lista) {
+  const ul = document.getElementById('lista-revisoes');
+  ul.innerHTML = '';
+
+  lista.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+}

@@ -4,33 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard | OdontoLegal</title>
+  <title>Dashboard - OdontoLegal</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="dashboard">
+  <div class="dashboard-container">
     <aside class="sidebar">
-      <h2>OdontoLegal</h2>
-      <nav>
+      <h2 class="logo">OdontoLegal</h2>
+      <nav class="menu">
         <ul>
-          <li><a href="#" class="active">Dashboard</a></li>
-          <li><a href="#">Casos Periciais</a></li>
-          <li><a href="#">Evidências</a></li>
-          <li><a href="#">Laudos</a></li>
-          <li><a href="#">Pacientes</a></li>
-          <li><a href="#">Usuários</a></li>
-          <li><a href="#" onclick="logout()">Sair</a></li>
+          <li><a href="casos.html">📝 Casos Periciais</a></li>
+          <li><a href="detalhes.html">📄 Detalhes do Caso</a></li>
+          <li><a href="evidencias.html">📷 Evidências</a></li>
+          <li><a href="laudo.html">📑 Laudo</a></li>
+          <li><a href="usuarios.html">👥 Gestão de Usuários</a></li>
+          <li><a href="#" onclick="logout()">🚪 Sair</a></li>
         </ul>
       </nav>
     </aside>
 
     <main class="main-content">
-      <header>
+      <section class="boas-vindas">
         <h1 id="boas-vindas">Bem-vindo(a)</h1>
-      </header>
-
-      <section class="conteudo" id="conteudo-dinamico">
-        <p>Selecione uma opção no menu para começar.</p>
+        <p>Use o menu lateral para navegar nas seções do sistema.</p>
       </section>
     </main>
   </div>
@@ -38,3 +34,4 @@
   <script src="js/dashboard.js"></script>
 </body>
 </html>
+

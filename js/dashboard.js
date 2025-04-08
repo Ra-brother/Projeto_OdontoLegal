@@ -1,5 +1,3 @@
-// js/dashboard.js
-
 function logout() {
     localStorage.removeItem('usuarioLogado');
     window.location.href = 'index.html';
@@ -16,4 +14,5 @@ function logout() {
       boasVindas.textContent = `Bem-vindo(a), ${usuario.nome} (${usuario.perfil})`;
     }
   });
+  
   
